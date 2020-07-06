@@ -1,0 +1,46 @@
+= Backend Team
+:showtitle:
+
+* Cale Kochenour
+* Andrea Milius
+* Allen Choi
+
+== Backend Team Plan
+* We're going to develop multiple MVPs on various tech stacks using various combinations listed below, we based the tech on appendix 1 of the PWS.
+* Each of the MVPs will try to have some sort of API framework and an ORM.
+* We will also try to make data analytics apart of our goal by understanding Chrystal Reports and Apache Spark with priority on Chrystal Reports because it is the only tech that is used in the PWS that is remotely close to any type of data analytic tool.
+
+== Tasking
+* Cale is taking lead on apache spark
+* Andrea will take lead on Chrystal Reports
+* Allen will take lead on setting up MVPs with various tech stacks.
+    - Secondary objective, spin up on frontend technologies.
+
+== Schedule
+1. Our plan for the first day is mostly research and planning.
+2. Second day, implementation.
+3. Play by ear.
+
+== End Product
+=== MVPs
+MVPs implemented in order:
+
+* C# MVP
+    - .net core (api framework)
+    - (need to research libraries)
+* Java MVP
+    - Springboot (api framework)
+    - (need to research libraries)
+* Python MVP
+    - flask (api framework)
+    - sqlalchemy (ORM)
+
+=== Databases
+* PSQL
+* OSQL
+* MSSQL
+
+=== Data Analysis Tools
+* Chrystal Reports
+* Apache Spark
+
