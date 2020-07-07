@@ -42,3 +42,9 @@ https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swas
 - <protocol>://localhost:<port>/swagger/v1/swagger.json 
 - <protocol>://localhost:<port>/swagger (UI)
 
+= dotnet CLI Debugging
+A collection of common debugging commands and tools.
+== Common Commands
+* dotnet restore
+ - restores dotnet project items
+
