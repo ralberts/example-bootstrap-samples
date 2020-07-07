@@ -26,3 +26,19 @@ https://localhost:5001/WeatherForecast
 * dotnet aspnet-codegenerator controller -name <controllername> -async -api -m <modelname_to_control> -dc <database_context_name> -outDir <directory_name_to_output_controller>
 - dotnet aspnet-codegenerator controller -name TodoItemsController -async -api -m TodoItem -dc TodoContext -outDir Controllers
 
+==== add authentication services
+* https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-protect-backend-with-aad
+* https://docs.microsoft.com/en-us/azure/active-directory-b2c/active-directory-b2c-custom-rest-api-netfw
+* https://identityserver.io/
+
+=== add OpenAPI/Swagger for endpoint documentation
+In order to implement openapi/swagger we will utilize swashbuckle/Nswag, swagger document generators: 
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-3.1&tabs=visual-studio-code
+
+* dotnet add <cs_project_file_name> package Swashbuckle.AspNetCore -v 5.5.0
+- dotnet add netcore_api.csproj package Swashbuckle.AspNetCore -v 5.5.0
+* add swashbuckle as a service like normal
+* when the server is up you can access swagger docs by:
+- <protocol>://localhost:<port>/swagger/v1/swagger.json 
+- <protocol>://localhost:<port>/swagger (UI)
+

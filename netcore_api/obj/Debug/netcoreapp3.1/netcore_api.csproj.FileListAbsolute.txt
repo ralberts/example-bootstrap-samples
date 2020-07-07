@@ -126,3 +126,8 @@ F:\projects\_personal\example-bootstrap-samples\netcore_api\obj\Debug\netcoreapp
 F:\projects\_personal\example-bootstrap-samples\netcore_api\obj\Debug\netcoreapp3.1\netcore_api.dll
 F:\projects\_personal\example-bootstrap-samples\netcore_api\obj\Debug\netcoreapp3.1\netcore_api.pdb
 F:\projects\_personal\example-bootstrap-samples\netcore_api\obj\Debug\netcoreapp3.1\netcore_api.genruntimeconfig.cache
+F:\projects\_personal\example-bootstrap-samples\netcore_api\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+F:\projects\_personal\example-bootstrap-samples\netcore_api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+F:\projects\_personal\example-bootstrap-samples\netcore_api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+F:\projects\_personal\example-bootstrap-samples\netcore_api\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+F:\projects\_personal\example-bootstrap-samples\netcore_api\obj\Debug\netcoreapp3.1\netcore_api.MvcApplicationPartsAssemblyInfo.cs
