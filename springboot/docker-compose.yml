@@ -1,0 +1,11 @@
+version: '3.6'
+
+services:
+  springboot:
+    build: .
+    ports:
+      - 8081:8081
+    volumes: 
+      - .:/usr/src/myapp
+    command: ./gradlew bootRun
+
