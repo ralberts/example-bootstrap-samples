@@ -1,0 +1,17 @@
+= .NET Core Backend Documentation
+
+== Creating a basic .NET Core Project
+Run the following commands in a terminal and in the directory just above where you want dotnet to create your project.
+
+=== create a new webapi project using .net core
+* dotnet new webapi -o <appname>
+
+=== add packages to the app
+* cd <appname>
+* dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+* dotnet add package Microsoft.EntityFrameworkCore.InMemory
+
+=== Running The Basic Backend
+After installing the project template it comes with a template that we can use to test the basic .net app by opening the project in visual studio code and "run" or ctrl+F5. We should then be able to hit a sample api on a browser:
+https://localhost:5001/WeatherForecast
+
