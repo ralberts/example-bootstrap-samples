@@ -4,23 +4,25 @@
 Run the following commands in a terminal and in the directory just above where you want dotnet to create your project.
 
 === create a new webapi project using dotnet CLI
+https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.1&tabs=visual-studio-code
+
 * dotnet new webapi -o <appname>
 
-=== add packages to the app
+==== add packages to the app
 * cd <appname>
 * dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 * dotnet add package Microsoft.EntityFrameworkCore.InMemory
 
-=== Running The Basic Backend
+==== Running The Basic Backend
 After installing the project template it comes with a template that we can use to test the basic .net app by opening the project in visual studio code and "run", ctrl+F5, or from CLI "dotnet run" in the application root. We should then be able to hit a sample api on a browser:
 https://localhost:5001/WeatherForecast
 
-=== Optional, add code generation packages "scaffolding"
+==== Optional, add code generation packages "scaffolding"
 * dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
 * dotnet add package Microsoft.EntityFrameworkCore.Design
 * dotnet tool install --global dotnet-aspnet-codegenerator
 
-==== sample command for code generator
+===== sample command for code generator
 * dotnet aspnet-codegenerator controller -name <controllername> -async -api -m <modelname_to_control> -dc <database_context_name> -outDir <directory_name_to_output_controller>
 - dotnet aspnet-codegenerator controller -name TodoItemsController -async -api -m TodoItem -dc TodoContext -outDir Controllers
 
