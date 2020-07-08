@@ -11,6 +11,13 @@
  - https://localhost:5001/swagger
  - <protocol>://localhost:<port>/swagger
 
+== dotnet CLI Debugging
+A collection of common debugging commands and tools.
+
+=== Common Commands
+* dotnet restore
+ - restores dotnet project items
+
 == Creating a basic .NET Core Project
 Run the following commands in a terminal and in the directory just above where you want dotnet to create your project.
 
@@ -81,10 +88,5 @@ https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro?view=aspnetcore-3
 * dotnet ef database update
  - The database update command creates the database and applies the new migration to it.
 
-= dotnet CLI Debugging
-A collection of common debugging commands and tools.
 
-== Common Commands
-* dotnet restore
- - restores dotnet project items
 
