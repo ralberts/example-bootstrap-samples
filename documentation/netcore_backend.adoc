@@ -44,6 +44,7 @@ https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swas
 
 = dotnet CLI Debugging
 A collection of common debugging commands and tools.
+
 == Common Commands
 * dotnet restore
  - restores dotnet project items
