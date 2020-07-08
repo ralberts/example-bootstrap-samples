@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using netcore_api.Models;
+using netcore_api.Data;
 
 namespace netcore_api
 {
@@ -29,12 +30,17 @@ namespace netcore_api
         {
             // Database Context
             services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("TodoList"));
+            services.AddDbContext<SchoolContext>(options => 
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"))
+            );
 
             // WebAPI Controllers
             services.AddControllers();
 
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen();
+
+            //services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

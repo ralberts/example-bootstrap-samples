@@ -42,6 +42,28 @@ https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swas
 - <protocol>://localhost:<port>/swagger/v1/swagger.json 
 - <protocol>://localhost:<port>/swagger (UI)
 
+=== add a database connection via Entity Framework
+only use the setup database portion, we are not serving web pages, jsut an api server:
+https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro?view=aspnetcore-3.1
+
+==== Install the following packages to enable Entity Framework and Tools
+* dotnet tool install --global dotnet-ef
+ - installs entity framework cli tools
+* dotnet add package Microsoft.EntityFrameworkCore.Design
+ - installs entity framework design tools
+
+==== create your models and dbcontext related
+* your models should contain attribute and relational information
+* the dbcontext should be a collection of your models
+
+==== add new db context and configure dbcontext to use new db service
+
+==== initiate db based on models
+* dotnet ef migrations add InitialCreate
+ - The migrations command scaffolds a migration to create the initial set of tables for the model.
+* dotnet ef database update
+ - The database update command creates the database and applies the new migration to it.
+
 = dotnet CLI Debugging
 A collection of common debugging commands and tools.
 
