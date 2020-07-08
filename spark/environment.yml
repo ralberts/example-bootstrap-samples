@@ -1,0 +1,20 @@
+name: spark-python
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Base dependencies
+  - python=3.8
+  - pip
+  
+  # Spark
+  - pyspark
+
+  # Jupyter environment
+  - autopep8
+  - jupyterlab
+  - notebook 
+  - jupyter_contrib_nbextensions
+  - nbclean

@@ -1,1 +1,4 @@
 netcore_api/.vscode/launch.json
+
+# Jupyter Notebook
+.ipynb_checkpoints
