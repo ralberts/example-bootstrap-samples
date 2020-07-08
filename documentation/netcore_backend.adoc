@@ -1,5 +1,16 @@
 = .NET Core Backend Documentation
 
+== Using The Sample .Net Backend
+
+=== Run the Backend
+* cd <path to netcore_api>
+* dotnet run
+
+=== Swagger Endpoint Documentation
+* Once the backend is running go to this page to see all endpoints:
+ - https://localhost:5001/swagger
+ - <protocol>://localhost:<port>/swagger
+
 == Creating a basic .NET Core Project
 Run the following commands in a terminal and in the directory just above where you want dotnet to create your project.
 
@@ -22,9 +33,12 @@ https://localhost:5001/WeatherForecast
 * dotnet add package Microsoft.EntityFrameworkCore.Design
 * dotnet tool install --global dotnet-aspnet-codegenerator
 
-===== sample command for code generator
+===== Generate Controllers
 * dotnet aspnet-codegenerator controller -name <controllername> -async -api -m <modelname_to_control> -dc <database_context_name> -outDir <directory_name_to_output_controller>
-- dotnet aspnet-codegenerator controller -name TodoItemsController -async -api -m TodoItem -dc TodoContext -outDir Controllers
+ - dotnet aspnet-codegenerator controller -name TodoItemsController -async -api -m TodoItem -dc TodoContext -outDir Controllers
+ - dotnet aspnet-codegenerator controller -name StudentsController -async -api -m Student -dc SchoolContext -outDir Controllers
+ - dotnet aspnet-codegenerator controller -name CoursesController -async -api -m Course -dc SchoolContext -outDir Controllers
+ - dotnet aspnet-codegenerator controller -name EnrollmentsController -async -api -m Enrollment -dc SchoolContext -outDir Controllers
 
 ==== add authentication services
 * https://docs.microsoft.com/en-us/azure/api-management/api-management-howto-protect-backend-with-aad
@@ -43,7 +57,7 @@ https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swas
 - <protocol>://localhost:<port>/swagger (UI)
 
 === add a database connection via Entity Framework
-only use the setup database portion, we are not serving web pages, jsut an api server:
+only use the setup database portion, we are not serving web pages, just an api server:
 https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro?view=aspnetcore-3.1
 
 ==== Install the following packages to enable Entity Framework and Tools
@@ -57,6 +71,9 @@ https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro?view=aspnetcore-3
 * the dbcontext should be a collection of your models
 
 ==== add new db context and configure dbcontext to use new db service
+* add this into your startup.cs under configure services and add the new dbcontext to use your data source or database.
+* this may require a connection string which can be configured in your appsettings.json
+ - sample: "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=netcore_api_db;Trusted_Connection=True;MultipleActiveResultSets=true"
 
 ==== initiate db based on models
 * dotnet ef migrations add InitialCreate
